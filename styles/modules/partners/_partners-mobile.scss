@@ -90,3 +90,11 @@
     }
   }
 }
+@media only screen and (max-width: 400px) {
+  .partner-head {
+    width: 90%;
+    .partner-subheading {
+      font-size: 2rem;
+    }
+  }
+}

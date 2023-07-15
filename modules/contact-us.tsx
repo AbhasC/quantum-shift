@@ -1,23 +1,9 @@
 import Image from "next/image";
 import Link from "next/link";
 import { IconType } from "react-icons";
-import {
-  BiLogoFacebook,
-  BiLogoTwitter,
-  BiLogoInstagram,
-  BiLogoBehance,
-  BiLogoDribbble,
-} from "react-icons/bi";
+import { contactSocials } from "@/data";
 
 export default function ContactUs() {
-  const contactSocials = [
-    BiLogoFacebook,
-    BiLogoTwitter,
-    BiLogoInstagram,
-    BiLogoBehance,
-    BiLogoDribbble,
-  ];
-
   const mapper = (Value: IconType, key: number) => {
     return (
       <Link href="/" key={key} className="cu-social-icon">

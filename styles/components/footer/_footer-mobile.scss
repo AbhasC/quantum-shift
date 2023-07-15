@@ -16,6 +16,9 @@
   }
   .footer-message {
     width: 80%;
+    .ft-message-header {
+      font-size: 2rem;
+    }
   }
   .footer-notify {
     padding-top: 5vh;
@@ -25,6 +28,9 @@
 @media only screen and (max-width: 500px) {
   .footer-message {
     width: 90%;
+    .ft-message-header {
+      font-size: 1.75rem;
+    }
   }
   .footer-notify {
     width: 90%;

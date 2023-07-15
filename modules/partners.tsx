@@ -1,174 +1,23 @@
 import Image from "next/image";
 import Link from "next/link";
 import { IconType } from "react-icons";
-import {
-  DiGithub,
-  DiReact,
-  DiBlackberry,
-  DiDropbox,
-  DiFirefox,
-  DiVisualstudio,
-} from "react-icons/di";
 import Carousel from "react-multi-carousel";
-import { companyName } from "@/data";
+import {
+  companyName,
+  feedbackCarouselData,
+  feedbackResponsive,
+  logoResponsive,
+  partnerLogos,
+} from "@/data";
 import "react-multi-carousel/lib/styles.css";
 
 export default function Partners() {
-  const partnerLogos = [
-    DiGithub,
-    DiReact,
-    DiBlackberry,
-    DiDropbox,
-    DiFirefox,
-    DiVisualstudio,
-    DiGithub,
-    DiReact,
-    DiBlackberry,
-    DiDropbox,
-    DiFirefox,
-    DiVisualstudio,
-    DiGithub,
-    DiReact,
-    DiBlackberry,
-    DiDropbox,
-    DiFirefox,
-    DiVisualstudio,
-  ];
-
   const mapper = (Val: IconType, ind: number) => {
     return (
       <Link href="/" className="logo" key={ind}>
         <Val />
       </Link>
     );
-  };
-
-  const feedbackCarouselData = [
-    {
-      para: "At QuantumShift, we are pioneering quantum\
-       solutions to revolutionize computing and problem-solving.\
-       Our expertise in quantum physics, computer science, and\
-       engineering allows us to unlock the true potential of \
-      quantum systems, enabling breakthrough advancements and \
-      transforming industries. Partner with us to embark on a \
-      quantum adventure and unlock unprecedented opportunities \
-      in a smarter, more connected world.",
-      src: "user1.webp",
-      alt: "user1",
-      username: "Sundar Pichai",
-      designation: "CEO, Google",
-    },
-    {
-      para: "At QuantumShift, we are pioneering quantum\
-       solutions to revolutionize computing and problem-solving.\
-       Our expertise in quantum physics, computer science, and\
-       engineering allows us to unlock the true potential of \
-      quantum systems, enabling breakthrough advancements and \
-      transforming industries. Partner with us to embark on a \
-      quantum adventure and unlock unprecedented opportunities \
-      in a smarter, more connected world.",
-      src: "user1.webp",
-      alt: "user2",
-      username: "Gobind Singh",
-      designation: "CEO, Hymns of Web",
-    },
-    {
-      para: "At QuantumShift, we are pioneering quantum\
-       solutions to revolutionize computing and problem-solving.\
-       Our expertise in quantum physics, computer science, and\
-       engineering allows us to unlock the true potential of \
-      quantum systems, enabling breakthrough advancements and \
-      transforming industries. Partner with us to embark on a \
-      quantum adventure and unlock unprecedented opportunities \
-      in a smarter, more connected world.",
-      src: "user1.webp",
-      alt: "user3",
-      username: "Satya Nadella",
-      designation: "CEO, Microsoft",
-    },
-    {
-      para: "At QuantumShift, we are pioneering quantum\
-       solutions to revolutionize computing and problem-solving.\
-       Our expertise in quantum physics, computer science, and\
-       engineering allows us to unlock the true potential of \
-      quantum systems, enabling breakthrough advancements and \
-      transforming industries. Partner with us to embark on a \
-      quantum adventure and unlock unprecedented opportunities \
-      in a smarter, more connected world.",
-      src: "user1.webp",
-      alt: "user4",
-      username: "Neal Mohan",
-      designation: "CEO, YouTube",
-    },
-    {
-      para: "At QuantumShift, we are pioneering quantum\
-       solutions to revolutionize computing and problem-solving.\
-       Our expertise in quantum physics, computer science, and\
-       engineering allows us to unlock the true potential of \
-      quantum systems, enabling breakthrough advancements and \
-      transforming industries. Partner with us to embark on a \
-      quantum adventure and unlock unprecedented opportunities \
-      in a smarter, more connected world.",
-      src: "user1.webp",
-      alt: "user5",
-      username: "Leena Nair",
-      designation: "CEO, Pepsico",
-    },
-    {
-      para: "At QuantumShift, we are pioneering quantum\
-       solutions to revolutionize computing and problem-solving.\
-       Our expertise in quantum physics, computer science, and\
-       engineering allows us to unlock the true potential of \
-      quantum systems, enabling breakthrough advancements and \
-      transforming industries. Partner with us to embark on a \
-      quantum adventure and unlock unprecedented opportunities \
-      in a smarter, more connected world.",
-      src: "user1.webp",
-      alt: "user6",
-      username: "Shantanu Narayen",
-      designation: "CEO, Adobe",
-    },
-  ];
-
-  const feedbackResponsive = {
-    desktop: {
-      breakpoint: { max: 3000, min: 1200 },
-      items: 1,
-      slidesToSlide: 1,
-    },
-    tablet: {
-      breakpoint: { max: 1200, min: 900 },
-      items: 1,
-      slidesToSlide: 1,
-    },
-    mobile: {
-      breakpoint: { max: 900, min: 0 },
-      items: 1,
-      slidesToSlide: 1,
-    },
-  };
-
-  const logoResponsive = {
-    desktop: {
-      breakpoint: { max: 3000, min: 1200 },
-      items: 6,
-      slidesToSlide: 2,
-    },
-    tablet: {
-      breakpoint: { max: 1200, min: 900 },
-      items: 5,
-      slidesToSlide: 2,
-    },
-    mobileLarge: {
-      breakpoint: { max: 900, min: 600 },
-      items: 4,
-      slidesToSlide: 2,
-    },
-    mobileSmall: {
-      breakpoint: { max: 600, min: 0 },
-      items: 3,
-      slidesToSlide: 2,
-    },
   };
 
   const carouselMapper = (

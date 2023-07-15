@@ -1,20 +1,57 @@
-import { useRef } from "react";
+import { useCallback, useEffect, useRef } from "react";
 import { AiOutlineDown } from "react-icons/ai";
+import { stats } from "@/data";
 
 export default function Introduction() {
-  const sectionRef = useRef<HTMLDivElement | null>(null);
+  const sectionRef = useRef<HTMLDivElement>(null);
+  const containerRef = useRef<HTMLDivElement>(null);
 
-  const stats = [
-    { value: 127, desc: "Awards Received" },
-    { value: 1505, desc: "Cups of Coffee" },
-    { value: 109, desc: "Projects Completed" },
-    { value: 102, desc: "Happy Clients" },
-  ];
+  const observerOptions = useRef<IntersectionObserverInit>({
+    threshold: 1,
+  });
+
+  const observerCallback = useCallback<IntersectionObserverCallback>(
+    (entries, obv) => {
+      function forEachCallback(elem: IntersectionObserverEntry) {
+        if (elem.isIntersecting) {
+          const numElems =
+            containerRef.current?.querySelectorAll(".stat-value");
+          numElems?.forEach((numElem, index) => {
+            const targetVal = stats[index]?.value;
+            const interval = setInterval(() => {
+              let prevVal = +(numElem?.textContent ?? "");
+              if (prevVal + 1 > (targetVal ?? Infinity)) {
+                clearInterval(interval);
+                return;
+              }
+              numElem.textContent = ++prevVal + "";
+            }, 500 / (targetVal ?? 1));
+          });
+          obv.disconnect();
+        }
+      }
+      entries.forEach(forEachCallback);
+    },
+    []
+  );
+
+  useEffect(() => {
+    const numberObserver: IntersectionObserver = new IntersectionObserver(
+      observerCallback,
+      observerOptions.current
+    );
+    if (containerRef.current) {
+      numberObserver.observe(containerRef.current);
+      return () => {
+        numberObserver.disconnect();
+      };
+    }
+  }, [observerCallback]);
 
   const mapper = (val: { value: number; desc: string }, ind: number) => {
     return (
       <div className="stat-container" key={ind}>
-        <span className="stat-value">{val.value}</span>
+        <span className="stat-value">0</span>
         <span className="stat-desc">{val.desc}</span>
       </div>
     );
@@ -43,7 +80,9 @@ export default function Introduction() {
         to quantum hardware and software development, we offer a comprehensive
         suite of solutions tailored to meet your specific needs.
       </p>
-      <div className="stats-container">{stats.map(mapper)}</div>
+      <div className="stats-container" ref={containerRef}>
+        {stats.map(mapper)}
+      </div>
     </section>
   );
 }

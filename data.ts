@@ -1,5 +1,20 @@
-import { BiShapeSquare } from "react-icons/bi";
+import {
+  BiShapeSquare,
+  BiLogoFacebook,
+  BiLogoTwitter,
+  BiLogoInstagram,
+  BiLogoBehance,
+  BiLogoDribbble,
+} from "react-icons/bi";
 import { BsMegaphone } from "react-icons/bs";
+import {
+  DiGithub,
+  DiReact,
+  DiBlackberry,
+  DiDropbox,
+  DiFirefox,
+  DiVisualstudio,
+} from "react-icons/di";
 import { IoEarthOutline } from "react-icons/io5";
 import { LuToyBrick } from "react-icons/lu";
 import { PiPaintBrushBroad } from "react-icons/pi";
@@ -81,3 +96,212 @@ driving innovation,\
  solving complex challenges, and shaping a future where possibilities\
  are limitless. Partner with us and step into the quantum era\
  for a smarter, more connected world.";
+
+export const compVisionLanding =
+  "We are a creative group of people who are ditching 0's and 1's and shifting\
+ towards a Quantum revolution.";
+
+export const contactSocials = [
+  BiLogoFacebook,
+  BiLogoTwitter,
+  BiLogoInstagram,
+  BiLogoBehance,
+  BiLogoDribbble,
+];
+
+export const socials = [
+  BiLogoFacebook,
+  BiLogoTwitter,
+  BiLogoInstagram,
+  BiLogoBehance,
+  BiLogoDribbble,
+];
+
+export const stats = [
+  { value: 127, desc: "Awards Received" },
+  { value: 1505, desc: "Cups of Coffee" },
+  { value: 109, desc: "Projects Completed" },
+  { value: 102, desc: "Happy Clients" },
+];
+
+export const partnerLogos = [
+  DiGithub,
+  DiReact,
+  DiBlackberry,
+  DiDropbox,
+  DiFirefox,
+  DiVisualstudio,
+  DiGithub,
+  DiReact,
+  DiBlackberry,
+  DiDropbox,
+  DiFirefox,
+  DiVisualstudio,
+  DiGithub,
+  DiReact,
+  DiBlackberry,
+  DiDropbox,
+  DiFirefox,
+  DiVisualstudio,
+];
+
+export const feedbackCarouselData = [
+  {
+    para: "At QuantumShift, we are pioneering quantum\
+       solutions to revolutionize computing and problem-solving.\
+       Our expertise in quantum physics, computer science, and\
+       engineering allows us to unlock the true potential of \
+      quantum systems, enabling breakthrough advancements and \
+      transforming industries. Partner with us to embark on a \
+      quantum adventure and unlock unprecedented opportunities \
+      in a smarter, more connected world.",
+    src: "user1.webp",
+    alt: "user1",
+    username: "Sundar Pichai",
+    designation: "CEO, Google",
+  },
+  {
+    para: "At QuantumShift, we are pioneering quantum\
+       solutions to revolutionize computing and problem-solving.\
+       Our expertise in quantum physics, computer science, and\
+       engineering allows us to unlock the true potential of \
+      quantum systems, enabling breakthrough advancements and \
+      transforming industries. Partner with us to embark on a \
+      quantum adventure and unlock unprecedented opportunities \
+      in a smarter, more connected world.",
+    src: "user1.webp",
+    alt: "user2",
+    username: "Gobind Singh",
+    designation: "CEO, Hymns of Web",
+  },
+  {
+    para: "At QuantumShift, we are pioneering quantum\
+       solutions to revolutionize computing and problem-solving.\
+       Our expertise in quantum physics, computer science, and\
+       engineering allows us to unlock the true potential of \
+      quantum systems, enabling breakthrough advancements and \
+      transforming industries. Partner with us to embark on a \
+      quantum adventure and unlock unprecedented opportunities \
+      in a smarter, more connected world.",
+    src: "user1.webp",
+    alt: "user3",
+    username: "Satya Nadella",
+    designation: "CEO, Microsoft",
+  },
+  {
+    para: "At QuantumShift, we are pioneering quantum\
+       solutions to revolutionize computing and problem-solving.\
+       Our expertise in quantum physics, computer science, and\
+       engineering allows us to unlock the true potential of \
+      quantum systems, enabling breakthrough advancements and \
+      transforming industries. Partner with us to embark on a \
+      quantum adventure and unlock unprecedented opportunities \
+      in a smarter, more connected world.",
+    src: "user1.webp",
+    alt: "user4",
+    username: "Neal Mohan",
+    designation: "CEO, YouTube",
+  },
+  {
+    para: "At QuantumShift, we are pioneering quantum\
+       solutions to revolutionize computing and problem-solving.\
+       Our expertise in quantum physics, computer science, and\
+       engineering allows us to unlock the true potential of \
+      quantum systems, enabling breakthrough advancements and \
+      transforming industries. Partner with us to embark on a \
+      quantum adventure and unlock unprecedented opportunities \
+      in a smarter, more connected world.",
+    src: "user1.webp",
+    alt: "user5",
+    username: "Leena Nair",
+    designation: "CEO, Pepsico",
+  },
+  {
+    para: "At QuantumShift, we are pioneering quantum\
+       solutions to revolutionize computing and problem-solving.\
+       Our expertise in quantum physics, computer science, and\
+       engineering allows us to unlock the true potential of \
+      quantum systems, enabling breakthrough advancements and \
+      transforming industries. Partner with us to embark on a \
+      quantum adventure and unlock unprecedented opportunities \
+      in a smarter, more connected world.",
+    src: "user1.webp",
+    alt: "user6",
+    username: "Shantanu Narayen",
+    designation: "CEO, Adobe",
+  },
+];
+
+export const feedbackResponsive = {
+  desktop: {
+    breakpoint: { max: 3000, min: 1200 },
+    items: 1,
+    slidesToSlide: 1,
+  },
+  tablet: {
+    breakpoint: { max: 1200, min: 900 },
+    items: 1,
+    slidesToSlide: 1,
+  },
+  mobile: {
+    breakpoint: { max: 900, min: 0 },
+    items: 1,
+    slidesToSlide: 1,
+  },
+};
+
+export const logoResponsive = {
+  desktop: {
+    breakpoint: { max: 3000, min: 1200 },
+    items: 6,
+    slidesToSlide: 2,
+  },
+  tablet: {
+    breakpoint: { max: 1200, min: 900 },
+    items: 5,
+    slidesToSlide: 2,
+  },
+  mobileLarge: {
+    breakpoint: { max: 900, min: 600 },
+    items: 4,
+    slidesToSlide: 2,
+  },
+  mobileSmall: {
+    breakpoint: { max: 600, min: 0 },
+    items: 3,
+    slidesToSlide: 2,
+  },
+};
+
+export const galleryImages = [
+  {
+    src: "/assets/images/image1.webp",
+    alt: "Gallery Image1",
+    name: "image-1",
+  },
+  {
+    src: "/assets/images/image2.webp",
+    alt: "Gallery Image2",
+    name: "image-2",
+  },
+  {
+    src: "/assets/images/image3.webp",
+    alt: "Gallery Image3",
+    name: "image-3",
+  },
+  {
+    src: "/assets/images/image4.webp",
+    alt: "Gallery Image4",
+    name: "image-4",
+  },
+  {
+    src: "/assets/images/image5.webp",
+    alt: "Gallery Image5",
+    name: "image-5",
+  },
+  {
+    src: "/assets/images/image6.webp",
+    alt: "Gallery Image6",
+    name: "image-6",
+  },
+];

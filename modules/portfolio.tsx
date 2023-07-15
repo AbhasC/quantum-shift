@@ -1,39 +1,7 @@
 import Image from "next/image";
+import { galleryImages } from "@/data";
 
 export default function Portfolio() {
-  const galleryImages = [
-    {
-      src: "/assets/images/image1.webp",
-      alt: "Gallery Image1",
-      name: "image-1",
-    },
-    {
-      src: "/assets/images/image2.webp",
-      alt: "Gallery Image2",
-      name: "image-2",
-    },
-    {
-      src: "/assets/images/image3.webp",
-      alt: "Gallery Image3",
-      name: "image-3",
-    },
-    {
-      src: "/assets/images/image4.webp",
-      alt: "Gallery Image4",
-      name: "image-4",
-    },
-    {
-      src: "/assets/images/image5.webp",
-      alt: "Gallery Image5",
-      name: "image-5",
-    },
-    {
-      src: "/assets/images/image6.webp",
-      alt: "Gallery Image6",
-      name: "image-6",
-    },
-  ];
-
   const mapper = (
     val: {
       src: string;

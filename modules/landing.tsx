@@ -1,24 +1,9 @@
 import Image from "next/image";
 import Link from "next/link";
-import {
-  BiLogoFacebook,
-  BiLogoTwitter,
-  BiLogoInstagram,
-  BiLogoBehance,
-  BiLogoDribbble,
-} from "react-icons/bi";
 import { IconType } from "react-icons/lib";
-import { companyName } from "@/data";
+import { compVisionLanding, companyName, socials } from "@/data";
 
 export default function Landing() {
-  const socials = [
-    BiLogoFacebook,
-    BiLogoTwitter,
-    BiLogoInstagram,
-    BiLogoBehance,
-    BiLogoDribbble,
-  ];
-
   const mapper = (Value: IconType, key: number) => {
     return (
       <Link href="/" key={key}>
@@ -28,7 +13,7 @@ export default function Landing() {
   };
 
   return (
-    <>
+    <main className="main-landing">
       <div className="img-container back-0">
         <Image
           src="/assets/images/background.webp"
@@ -38,13 +23,10 @@ export default function Landing() {
           sizes="100%"
         />
       </div>
-      <main className="main-landing">
+      <div className="main-landing-container">
         <h1 className="main-heading">WELCOME TO {companyName}</h1>
         <div className="main-container">
-          <p className="main-para">
-            {`We are a creative group of people who are ditching 0's and 1's and shifting\
- towards a Quantum revolution.`}
-          </p>
+          <p className="main-para">{compVisionLanding}</p>
           <div className="main-socials">{socials.map(mapper)}</div>
         </div>
         <div className="main-btn-container">
@@ -55,7 +37,7 @@ export default function Landing() {
             Get in touch
           </Link>
         </div>
-      </main>
-    </>
+      </div>
+    </main>
   );
 }
