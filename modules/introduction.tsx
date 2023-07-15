@@ -46,6 +46,7 @@ export default function Introduction() {
         numberObserver.disconnect();
       };
     }
+    return;
   }, [observerCallback]);
 
   const mapper = (val: { value: number; desc: string }, ind: number) => {
