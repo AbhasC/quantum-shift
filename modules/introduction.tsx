@@ -25,7 +25,7 @@ export default function Introduction() {
                 return;
               }
               numElem.textContent = ++prevVal + "";
-            }, 500 / (targetVal ?? 1));
+            }, 1500 / (targetVal ?? 1));
           });
           obv.disconnect();
         }

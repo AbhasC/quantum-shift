@@ -5,7 +5,7 @@
   align-items: center;
   padding-top: 12.5vh;
   padding-bottom: 10vh;
-  background-color: var(--font-green);
+  background-color: var(--font-blue);
   position: relative;
   * {
     transition: all 0.5s ease-in-out;
@@ -21,7 +21,7 @@
   &:nth-of-type(1)::after {
     content: "";
     position: absolute;
-    border: 1px solid var(--font-green);
+    border: 1px solid var(--font-blue);
     height: 10vh;
     top: -10vh;
     right: 10%;
@@ -38,7 +38,7 @@
     border: none;
     cursor: pointer;
     svg {
-      color: var(--font-green);
+      color: var(--font-blue);
       margin-right: 0.5vw;
       align-self: center;
     }

@@ -1,9 +1,14 @@
+import { type RefObject } from "react";
 import Image from "next/image";
 import Link from "next/link";
 import { IconType } from "react-icons/lib";
 import { compVisionLanding, companyName, socials } from "@/data";
 
-export default function Landing() {
+export default function Landing({
+  imgContainerRef,
+}: {
+  imgContainerRef: RefObject<HTMLDivElement>;
+}) {
   const mapper = (Value: IconType, key: number) => {
     return (
       <Link href="/" key={key}>
@@ -14,9 +19,9 @@ export default function Landing() {
 
   return (
     <main className="main-landing">
-      <div className="img-container back-0">
+      <div className="img-container back-0" ref={imgContainerRef}>
         <Image
-          src="/assets/images/background.webp"
+          src="/assets/images/quantum-back.webp"
           alt="Background"
           fill
           priority

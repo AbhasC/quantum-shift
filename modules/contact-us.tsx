@@ -1,9 +1,44 @@
+import { useRef, type RefObject, useCallback, useEffect } from "react";
 import Image from "next/image";
 import Link from "next/link";
 import { IconType } from "react-icons";
 import { contactSocials } from "@/data";
 
-export default function ContactUs() {
+export default function ContactUs({
+  imgContainerRef,
+}: {
+  imgContainerRef: RefObject<HTMLDivElement>;
+}) {
+  const formRef = useRef<HTMLDivElement>(null);
+
+  const observerOptions = useRef<IntersectionObserverInit>({
+    threshold: 0.5,
+  });
+
+  const observerCallback = useCallback<IntersectionObserverCallback>(
+    (entries) => {
+      const isIntersecting = entries[0]?.isIntersecting ?? false;
+      if (isIntersecting) {
+        formRef.current?.classList.add("active");
+      } else {
+        formRef.current?.classList.remove("active");
+      }
+    },
+    []
+  );
+
+  useEffect(() => {
+    const contactObserver: IntersectionObserver = new IntersectionObserver(
+      observerCallback,
+      observerOptions.current
+    );
+    if (formRef.current) {
+      contactObserver.observe(formRef.current);
+      return () => contactObserver.disconnect();
+    }
+    return;
+  }, [observerCallback]);
+
   const mapper = (Value: IconType, key: number) => {
     return (
       <Link href="/" key={key} className="cu-social-icon">
@@ -13,9 +48,9 @@ export default function ContactUs() {
   };
   return (
     <section className="contact-us-main">
-      <div className="img-container back-5">
+      <div className="img-container back-5" ref={imgContainerRef}>
         <Image
-          src="/assets/images/background-speakers.webp"
+          src="/assets/images/quantum-back1.webp"
           alt="Background"
           fill
           sizes="100%"
@@ -28,7 +63,7 @@ export default function ContactUs() {
         </p>
       </h3>
       <div className="contact-us-container">
-        <div className="contact-us-form">
+        <div className="contact-us-form" ref={formRef}>
           <span className="cu-form-header">SEND US A MESSAGE</span>
           <form className="cu-form">
             <input

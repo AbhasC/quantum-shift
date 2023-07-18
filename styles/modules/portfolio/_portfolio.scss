@@ -2,8 +2,9 @@
   color: white;
   width: 100%;
   position: relative;
+  background-color: white;
+  z-index: 1;
   &::before {
-    z-index: -1;
     background-color: var(--font-black);
     position: absolute;
     content: "";
@@ -18,14 +19,16 @@
     text-align: center;
     margin-top: 13vh;
     .gallery-heading {
-      color: var(--font-green);
+      color: var(--font-blue);
       letter-spacing: 0.15em;
+      z-index: 2;
     }
     .gallery-description {
       line-height: 1.25em;
       margin-top: 2vh;
       font-size: 3rem;
       font-weight: 600;
+      z-index: 2;
     }
   }
   .gallery-container {

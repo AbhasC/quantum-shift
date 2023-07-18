@@ -119,7 +119,7 @@ export const socials = [
 
 export const stats = [
   { value: 127, desc: "Awards Received" },
-  { value: 1505, desc: "Cups of Coffee" },
+  { value: 150, desc: "Cups of Coffee" },
   { value: 109, desc: "Projects Completed" },
   { value: 102, desc: "Happy Clients" },
 ];
